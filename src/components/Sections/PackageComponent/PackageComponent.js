@@ -1,5 +1,23 @@
 import styles from '../PackageComponent/PackageComponent.module.css';
 
+/**
+ * Componente PackageComponent: Muestra una lista de paquetes estáticos con precios y descripciones.
+ * 
+ * Este componente fue desarrollado para demostrar mi capacidad para crear interfaces de usuario
+ * estáticas y dinámicas utilizando React. Aunque los datos son estáticos en este caso, el componente
+ * está diseñado de manera modular y escalable, lo que permitiría fácilmente integrar datos dinámicos
+ * provenientes de una API o un estado global en el futuro.
+ * 
+ * Características clave:
+ * - Renderizado de una lista de paquetes con títulos, precios y descripciones.
+ * - Manejo condicional de estilos y contenido basado en propiedades específicas (como `textButton`).
+ * - Uso de CSS Modules para estilos encapsulados y evitación de conflictos de clases.
+ * 
+ * Este componente es un ejemplo de cómo puedo estructurar y desarrollar interfaces reutilizables
+ * y mantenibles, siguiendo buenas prácticas de desarrollo.
+ * 
+ * @returns {JSX.Element} Una sección que muestra una lista de paquetes con detalles y botones de acción.
+ */
 export default function PackageComponent() {
 
     const dataPackage = [
