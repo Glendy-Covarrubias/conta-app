@@ -1,0 +1,27 @@
+/* region Estilos para la sección de pasos */
+.stepList {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.stepItem {
+    padding: 1.5rem;
+    width: 200px;
+    text-align: center;
+}
+
+.stepItem h4 {
+    margin-bottom: 0.5rem;
+    color: #c1e64a;
+}
+
+.stepItem p {
+    font-size: 13px;
+    color: #f4f4f4;
+}
+/* endRegion Estilos para la sección de pasos */

@@ -1,0 +1,29 @@
+/* region del Card */
+.card {
+    width: 200px;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: #c1e64a;
+}
+
+.card p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+/* endRegion del Card */

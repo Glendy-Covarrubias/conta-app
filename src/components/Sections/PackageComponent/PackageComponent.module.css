@@ -1,0 +1,63 @@
+/* region Contenedor de los paquetes */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.package {
+    background-color: #d9eaf3;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.package h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #2d4ec4;
+}
+
+.package p {
+    font-size: 11px;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.chooseButton,
+.chooseButtonDinamic {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1rem;
+    border-radius: 16px;
+    width: 90px;
+}
+
+.chooseButton, .chooseButtonDinamic {
+    background-color: #387ab2;
+    color: white;
+}
+
+.chooseButton:hover, .chooseButtonDinamic:hover {
+    background-color: #1a2f7a;
+    transform: translateY(-2px);
+}
+
+.chooseButtonDinamic{
+    width: 100%;
+}
+
+.miniText {
+    font-size: 12px;
+}
+
+.maxText {
+    font-size: 15px;
+}
+/* endRegion Contenedor de los paquetes */

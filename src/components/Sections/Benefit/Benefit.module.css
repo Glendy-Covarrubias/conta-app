@@ -1,0 +1,34 @@
+/*region del Section benefist*/
+.benefitList,
+.benefitItem {
+    margin-top: 1rem;
+}
+
+.benefitItem label {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.benefitItem span {
+    display: flex;
+    align-items: center;
+}
+
+.benefitItem p {
+    width: 69%;
+    font-size: 13px;
+}
+
+.benefitItem span {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .benefitItem,
+    .benefitItem p {
+        width: 100%;
+    }
+}
+/*endRegion del Section benefist*/
