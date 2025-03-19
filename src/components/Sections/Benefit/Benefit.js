@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { BENEFIT_DATA } from '../../../utils/constants';
 import styles from '../Benefit/Benefit.module.css';
 
 /**
@@ -20,18 +21,24 @@ export default function Benefit() {
     const [dataBenefits, setDataBenefits] = useState([]);
 
     useEffect(() => {
-        // Función asíncrona para obtener los datos
-        const fetchData = async () => {
-            try {
-                const response = await fetch('/api/benefit'); // Hacer la solicitud a la API
-                const data = await response.json(); // Convertir la respuesta a JSON
-                setDataBenefits(data.data); // Actualizar el estado con los datos
-            } catch (error) {
-                console.error('Error al obtener los datos:', error);
-            }
-        };
+        if (process.env.NODE_ENV === 'production') {
+            setDataBenefits(BENEFIT_DATA);
+        } else {
+            // Función asíncrona para obtener los datos
+            const fetchData = async () => {
+                try {
+                    const response = await fetch('/api/benefit'); // Hacer la solicitud a la API
+                    
+                    const data = await response.json(); // Convertir la respuesta a JSON
+                    console.log(data)
+                    setDataBenefits(data.data); // Actualizar el estado con los datos
+                } catch (error) {
+                    console.error('Error al obtener los datos:', error);
+                }
+            };
 
-        fetchData(); // Llamar a la función
+            fetchData(); // Llamar a la función
+        }
     }, []);
 
     return (
