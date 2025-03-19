@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { steps } from '../../../store/stepSlice'; // Importa la acción
 import styles from '../Step/Step.module.css';
@@ -24,11 +25,15 @@ import styles from '../Step/Step.module.css';
  */
 export default function Step() {
     const dispatch = useDispatch();
-    const steps = useSelector((state) => state.step.data);
+    const stepsData = useSelector((state) => state.step.data);
+
+    useEffect(() => {
+        dispatch(steps()); // Despacha la acción para actualizar el estado
+    }, [dispatch]);
 
     return (
         <div className={styles.stepList}>
-            {steps.map((service, index) => {
+            {stepsData.map((service, index) => {
                 const IconComponent = require('react-icons/fa')[service.icon]; // Importa el ícono dinámicamente
                 return (
                     <div key={index} className={styles.stepItem}>
